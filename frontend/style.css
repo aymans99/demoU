@@ -1,0 +1,270 @@
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+/* Navigation Styles */
+.navbar {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.navbar ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.navbar .checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+#check + .checkbtn:before {
+  content: "\2630"; /* Unicode character for ☰ (bar icon) */
+}
+
+#check:checked + .checkbtn:before {
+  content: "\2715"; /* Unicode character for ✕ (close icon) */
+}
+
+/* Responsive Styles for Navigation */
+@media (max-width: 952px) {
+  .navbar .logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .navbar .checkbtn {
+    display: block;
+  }
+
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .navbar ul li a {
+    font-size: 20px;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  .navbar #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* Other Styles for CRUD Section */
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+.crud-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.crud-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.crud-button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.crud-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.crud-item {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.crud-itembutton {
+  float: right;
+  background-color: red !important;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.crud-item button:hover {
+  background-color: #d32f2f;
+}
+
+.crud-error-message {
+  color: red;
+  margin-top: 5px;
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.crud-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.crud-li {
+  background-color: whitesmoke !important;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px !important;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
