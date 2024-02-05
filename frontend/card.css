@@ -1,8 +1,6 @@
 .container {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-x: auto;
   gap: 30px;
 }
 
@@ -24,4 +22,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Limit to 3 lines */
   -webkit-box-orient: vertical;
+}
+@media (max-width: 500px) {
+  .box {
+    width: 300px;
+    min-width: 300px;
+  }
 }
