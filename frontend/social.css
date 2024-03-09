@@ -1,0 +1,63 @@
+.container {
+  width: 990px;
+  margin: 60px auto;
+  display: flex;
+  gap: 40px;
+}
+.feeds {
+  width: 600px;
+}
+.feed {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+.feed-img {
+  width: 100%;
+  border-radius: 14px;
+}
+.profile {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 8px;
+  align-items: center;
+}
+.user {
+  height: 50px;
+  border-radius: 50%;
+}
+.user-name {
+  font-size: 14px;
+  color: gray;
+}
+.icons {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  width: 390px;
+}
+.title {
+  margin-top: 0;
+}
+.app {
+}
+.app img {
+  height: 50px;
+  width: 150px;
+}
+.story-container {
+  display: flex;
+  gap: 10px;
+  width: 990px;
+  margin: 30px auto;
+}
+.story-img {
+  height: 80px;
+  border-radius: 50%;
+}
+.story {
+  text-align: center;
+}

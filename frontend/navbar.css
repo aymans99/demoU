@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+#check {
+  display: none;
+}
+
+.checkbtn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.fa-times {
+  display: none; /* Initially hide the X icon */
+}
+
+@media (max-width: 767px) {
+  .checkbtn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #closeIcon {
+    display: none;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+
+  /* Apply animation to the hamburger icon */
+  .animate-hamburger {
+    animation: spin 1s ease-in-out;
+  }
+}

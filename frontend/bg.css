@@ -1,0 +1,17 @@
+.bg {
+  width: 100%;
+  margin: 60px auto;
+  position: relative;
+  display: flex;
+  height: 300px;
+}
+.bg-img {
+  width: 100%;
+  object-fit: fill;
+}
+.content {
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  color: white;
+}
